@@ -71,9 +71,6 @@ main(){
   String fullName= firstName + ' ' + secondName;
   print(fullName);
 
-  int a1 = 5;
-  int b1 = 10;
-  int result3 = a1 + b1 * 2;
 
 
 }
