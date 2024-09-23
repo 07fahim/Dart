@@ -59,7 +59,7 @@ main(){
 
   // String interpolation
 
-  String message = 'Hello i am Cr7 and $userName Result => ${6+1}';
+  String message = 'Hello i am Cr7 Goat and $userName Result => ${6+1}';
   print(message);
 
   print(moneyToreturn.toStringAsFixed(1));
