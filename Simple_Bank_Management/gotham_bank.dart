@@ -13,7 +13,7 @@ class BankAccount{
       _balance +=amount;
       print("Deposit: ${amount.toStringAsFixed(3)}tk).New Balance: ${_balance.toStringAsFixed(3)}tk");
     }else{
-      print('Invalid deposit amount');
+      print('Invalid Deposit Amount');
     }
   }
 
@@ -24,7 +24,7 @@ class BankAccount{
     }else if(amount>_balance){
       print('Insufficient Fund');
     }else{
-      print("Invalid withdraw amount");
+      print("Invalid Withdraw Amount");
     }
   }
 
