@@ -28,5 +28,68 @@ void main(){
     }
   }
 
+  BankAccount account = BankAccount(name, id);
 
+  void printMenu(){
+    print("\n1. Deposit");
+    print("2. Withdraw");
+    print("3. Display Account Info");
+    print('4. Exit');
+    print("Enter your choice:");
+  }
+  
+  void performDeposit(BankAccount account){
+    print("Enter deposit amount");
+    double amount;
+    while(true){
+      try{
+        amount = double.parse(stdin.readLineSync()!);
+        break;
+      }catch(e){
+        print('Invalid input. Please enter a valid number for the deposit amount:');
+      }
+    }
+    account.deposit(amount);
+  }
+
+  void performWithdraw(BankAccount account){
+    print("Enter withdraw amount");
+    double amount;
+    while(true){
+      try{
+        amount = double.parse(stdin.readLineSync()!);
+        break;
+      }catch(e){
+        print('Invalid input. Please enter a valid number for the deposit amount:');
+      }
+    }
+    account.withdraw(amount);
+  }
+
+  String? choice;
+  do {
+    printMenu();
+    choice = stdin.readLineSync();
+
+    switch (choice) {
+      case '1':
+        performDeposit(account);
+        break;
+      case '2':
+        performWithdraw(account);
+        break;
+      case '3':
+        account.displayInfo();
+        break;
+      case '4':
+        print('Thank you for using our banking system. Goodbye!');
+        break;
+      default:
+        print('Invalid choice. Please try again.');
+    }
+  } while (choice != '4');
 }
+
+
+
+

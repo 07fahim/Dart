@@ -4,7 +4,7 @@ class BankAccount{
   int accountId;
   double _balance=0;
 
-  BankAccount({required this.accountName,required this.accountId});
+  BankAccount(this.accountName, this.accountId);
 
   double get balance => _balance;
 
